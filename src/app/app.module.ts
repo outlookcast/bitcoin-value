@@ -9,6 +9,8 @@ import { BrazilianComponent } from './brazilian/brazilian.component';
 import { InternationalComponent } from './international/international.component';
 import { routing } from 'app/app.routing';
 import { MaterializeModule } from 'angular2-materialize';
+import { ChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { MaterializeModule } from 'angular2-materialize';
     FormsModule,
     HttpModule,
     routing,
-    MaterializeModule
+    MaterializeModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

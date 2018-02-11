@@ -20,3 +20,11 @@
     <td>{{ brazil.sell }}</td>
   </tr>
 </table>
+
+<h2>Volume (24h)</h2>
+<div style="display: block">
+  <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"></canvas>
+</div>
