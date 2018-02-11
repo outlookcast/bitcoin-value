@@ -1,8 +1,8 @@
-<h2>Price on Brazilian Exchanges</h2>
+<h2>Ticker (24h)</h2>
 
 <table class="responsive-table highlight bordered">
   <tr>
-    <th>Name</th>
+    <th>Exchange</th>
     <th>High</th> 
     <th>Last</th>
     <th>Low</th>
@@ -13,14 +13,36 @@
     <th>Average price</th>
   </tr>
   <tr *ngFor="let brazil of BrazilData">
-    <td>{{brazil.name}}</td>
-    <td>{{brazil.high}}</td>
-    <td>{{brazil.low}}</td>
-    <td>{{brazil.last}}</td>
-    <td>{{brazil.money}}</td>
-    <td>{{brazil.open}}</td>
-    <td>{{brazil.trades}}</td>
-    <td>{{brazil.vol}}</td>
-    <td>{{brazil.vwap}}</td>
+    <td>{{ brazil.name }}</td>
+    <td>{{ brazil.high }}</td>
+    <td>{{ brazil.low }}</td>
+    <td>{{ brazil.last }}</td>
+    <td>{{ brazil.money }}</td>
+    <td>{{ brazil.open }}</td>
+    <td>{{ brazil.trades }}</td>
+    <td>{{ brazil.vol }}</td>
+    <td>{{ brazil.vwap }}</td>
+  </tr>
+</table>
+
+<h2>Book of Fees</h2>
+<table class="responsive-table highlight bordered">
+  <tr>
+    <th>Exchange</th>
+    <th>Deposit BTC</th>
+    <th>Deposit BRL</th>
+    <th>Cash out BTC</th>
+    <th>Cash out BRL</th>
+    <th>Buy</th>
+    <th>Sell</th>
+  </tr>
+  <tr *ngFor="let brazil of BrazilFee">
+    <td>{{ brazil.name }}</td>
+    <td>{{ brazil.fees.in_BTC }}</td>
+    <td>{{ brazil.fees.in_BRL }}</td>
+    <td>{{ brazil.fees.out_BTC }}</td>
+    <td>{{ brazil.fees.out_BRL }}</td>
+    <td>{{ brazil.fees.trade_book[0] }}</td>
+    <td>{{ brazil.fees.trade_book[1] }}</td>
   </tr>
 </table>
