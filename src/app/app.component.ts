@@ -12,9 +12,11 @@ export class AppComponent {
   constructor(){
     $( document ).ready(function(){
       $(".button-collapse").sideNav();
-    });
-    $(".button-collapse").sideNav('hide');      
+    });   
+  }
 
-    
+  //hide menu after click
+  hide(){
+    $(".button-collapse").sideNav('hide');
   }
 }

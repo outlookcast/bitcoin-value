@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var jQuery:any;
-declare var $:any;
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,9 +7,7 @@ declare var $:any;
 })
 export class HomeComponent implements OnInit {
 
-  constructor() {
-    $(".button-collapse").sideNav('hide');      
-  }
+  constructor() {}
 
   ngOnInit() {
   }

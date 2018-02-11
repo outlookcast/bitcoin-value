@@ -9,17 +9,17 @@
 </nav> -->
 <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a routerLink="" class="brand-logo">Bitcoin Value</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
             <li><a routerLink="">Home</a></li>
             <li><a routerLink="international">International Exchanges</a></li>
-            <li><a routerLink="brazilian">Javascript</a></li>
+            <li><a routerLink="brazilian">Brazilian Exchanges</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-            <li><a routerLink="">Home</a></li>
-            <li><a routerLink="international">International Exchanges</a></li>
-            <li><a routerLink="brazilian">Javascript</a></li>
+            <li><a routerLink="" (click)="hide()">Home</a></li>
+            <li><a routerLink="international" (click)="hide()">International Exchanges</a></li>
+            <li><a routerLink="brazilian" (click)="hide()">Brazilian Exchanges</a></li>
       </ul>
     </div>
   </nav>

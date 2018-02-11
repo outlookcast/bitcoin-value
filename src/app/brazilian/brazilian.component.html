@@ -1,3 +1,26 @@
-<p>
-  brazilian works!
-</p>
+<h2>Price on Brazilian Exchanges</h2>
+
+<table class="responsive-table highlight bordered">
+  <tr>
+    <th>Name</th>
+    <th>High</th> 
+    <th>Last</th>
+    <th>Low</th>
+    <th>Money</th>
+    <th>Open</th>
+    <th>Trades</th>
+    <th>Volume</th>
+    <th>Average price</th>
+  </tr>
+  <tr *ngFor="let brazil of BrazilData">
+    <td>{{brazil.name}}</td>
+    <td>{{brazil.high}}</td>
+    <td>{{brazil.low}}</td>
+    <td>{{brazil.last}}</td>
+    <td>{{brazil.money}}</td>
+    <td>{{brazil.open}}</td>
+    <td>{{brazil.trades}}</td>
+    <td>{{brazil.vol}}</td>
+    <td>{{brazil.vwap}}</td>
+  </tr>
+</table>
