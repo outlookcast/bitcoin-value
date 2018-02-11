@@ -1,31 +1,81 @@
-<header>
-  <div class="navbar-fixed">
-      <nav>
-          <div class="nav-wrapper"> <a routerLink="" class="brand-logo"><i class="fab fa-bitcoin" style="color:rgb(253, 126, 20)"></i> Bitcoin Value</a>
-              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-              <ul class="right hide-on-med-and-down">
-                <li><a routerLink="" (click)="hide()">Home</a></li>
-                <li><a routerLink="international" (click)="hide()">International Exchanges</a></li>
-                <li><a routerLink="brazilian" (click)="hide()">Brazilian Exchanges</a></li>
-              </ul>
-          </div>
-      </nav>
-  </div>
- <!-- Move the sidenav outside of .navbar-fixed -->
-  <ul class="side-nav" id="mobile-demo">
-    <li><a routerLink="" (click)="hide()">Home</a></li>
-    <li><a routerLink="international" (click)="hide()">International Exchanges</a></li>
-    <li><a routerLink="brazilian" (click)="hide()">Brazilian Exchanges</a></li>
-  </ul>
-</header>
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a routerLink="" class="brand-logo">
+                        <i class="fab fa-bitcoin" ></i> Bitcoin Value</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a routerLink="" (click)="hide()">Home</a>
+                        </li>
+                        <li>
+                            <a routerLink="international" (click)="hide()">International Exchanges</a>
+                        </li>
+                        <li>
+                            <a routerLink="brazilian" (click)="hide()">Brazilian Exchanges</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Move the sidenav outside of .navbar-fixed -->
+        <ul class="side-nav" id="mobile-demo">
+            <li>
+                <a routerLink="" (click)="hide()">Home</a>
+            </li>
+            <li>
+                <a routerLink="international" (click)="hide()">International Exchanges</a>
+            </li>
+            <li>
+                <a routerLink="brazilian" (click)="hide()">Brazilian Exchanges</a>
+            </li>
+        </ul>
+    </header>
 
+    <main>
+        <div class="container" style="margin-bottom:40px;">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
 
-<div class="container">
-    <router-outlet></router-outlet>
-</div>
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav('show');
+        })
+    </script>
 
-<script>
-    $( document ).ready(function(){
-      $(".button-collapse").sideNav('show');
-    })
-</script>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Bitcoin Value</h5>
+                    <p class="grey-text text-lighten-4">A application created with Angular CLI</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="http://fb.com/outlookcast" target="_blank">My Facebook</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="http://github.com/outlookcast" target="_blank">My GitHub</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/vsampaio/" target="_blank">My LikedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 Copyright
+                <a class="grey-text text-lighten-4 right">Last Updated: {{date}} </a>
+            </div>
+        </div>
+    </footer>
+</body>
