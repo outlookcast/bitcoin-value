@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var jQuery:any;
+declare var $:any;
 @Component({
   selector: 'app-international',
   templateUrl: './international.component.html',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InternationalComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    $(".button-collapse").sideNav('hide');      
+  }
 
   ngOnInit() {
   }
