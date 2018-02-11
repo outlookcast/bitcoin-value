@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { BrazilianComponent } from './brazilian/brazilian.component';
 import { InternationalComponent } from './international/international.component';
 import { routing } from 'app/app.routing';
+import { MaterializeModule } from 'angular2-materialize';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { routing } from 'app/app.routing';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    MaterializeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
