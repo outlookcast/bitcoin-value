@@ -7,7 +7,7 @@ The idea of the repository is to make a basic application with Angular CLI consu
 
 ## Getting Start
 Clone the project and then install the modules by typing `npm install`. After that start the application by entering `npm start`. The application will run on port `3000`. 
-NOTE: To run the application you need to install the Angular CLI, if you do not have it installed, type `npm install -g @ angular / cli`.
+NOTE: To run the application you need to install the Angular CLI, if you do not have it installed, type `npm install -g @ angular/cli`.
 
 ## Used APIs
 	Poloniex
@@ -18,4 +18,4 @@ NOTE: To run the application you need to install the Angular CLI, if you do not 
 	Bitcointrade
 
 ## Contributors
-	github.com/outlookcast (Vinicius Sampaio)
+[outlookcast ](https://github.com/outlookcast)- Vinicius Sampaio
