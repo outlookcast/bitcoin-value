@@ -1,3 +1,28 @@
-<p>
-  international works!
-</p>
+<h2>Poloniex</h2>
+
+<table class="responsive-table highlight bordered">
+  <tr>
+    <th>Trade</th>
+    <th>High</th> 
+    <th>Low</th>
+    <th>Vol</th>
+    <th>Last</th>
+    <th>Buy</th>
+    <th>Sell</th>
+    <th>Change</th>
+  </tr>
+  <tr *ngFor="let poloniex of PoloniexData">
+    <td>{{ poloniex.name }}</td>
+    <td>{{ poloniex.high24hr }}</td>
+    <td>{{ poloniex.low24hr }}</td>
+    <td>{{ poloniex.baseVolume }}</td>
+    <td>{{ poloniex.last }}</td>
+    <td>{{ poloniex.highestBid }}</td>
+    <td>{{ poloniex.lowestAsk }}</td>
+    <td>
+      <div *ngIf="verify(poloniex.percentChange)" style="color:green">{{ aprox(poloniex.percentChange*100) }}%</div>
+      <div *ngIf="!verify(poloniex.percentChange)" style="color:red">{{ aprox(poloniex.percentChange*100) }}%</div>
+    </td>
+
+  </tr>
+</table>
