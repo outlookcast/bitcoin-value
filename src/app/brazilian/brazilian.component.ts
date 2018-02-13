@@ -8,9 +8,9 @@ import { Http } from '@angular/http/src/http';
 })
 export class BrazilianComponent implements OnInit {
 
-  private BrazilData:any = [];
+  BrazilData:any = [];
 
-  private contDownloaded = 0;
+  contDownloaded = 0;
 
 
   constructor(private http: Http) {
