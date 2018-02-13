@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http/src/http';
-declare var jquery:any;
-declare var $ :any;
 @Component({
   selector: 'app-international',
   templateUrl: './international.component.html',

@@ -24,5 +24,10 @@ export class AppComponent {
   //hide menu after click
   hide(){
     $(".button-collapse").sideNav('hide');
+    console.log('hide')
+  }
+
+  ngOnInit(){
+    
   }
 }
