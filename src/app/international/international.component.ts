@@ -11,7 +11,7 @@ export class InternationalComponent implements OnInit {
   PoloniexVol:any[] = [];
   Best = {name:'',change:0,vol:''};
   Worse = {name:'',change:0,vol:''};
-
+  downloaded:boolean = false;
   constructor(private http: Http) {
     this.http.get('https://poloniex.com/public?command=returnTicker').subscribe(data => {
       let poloniex = data.json();
@@ -46,6 +46,7 @@ export class InternationalComponent implements OnInit {
         }
       }
       console.log('Best:',this.Best,'Worse', this.Worse)
+      this.downloaded = true;
     });
 
     this.http.get('https://poloniex.com/public?command=return24hVolume').subscribe(data => {
