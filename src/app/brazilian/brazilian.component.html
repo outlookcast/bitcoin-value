@@ -1,23 +1,23 @@
 <h2>Ticker (24h)</h2>
-<div class="loader loader-double is-active" *ngIf="!(mercadobitcoinD&&flowbtcD&&negociecoinsD&&bitcointradeD&&bitcointoyouD)"></div>
+<div class="loader loader-double is-active" *ngIf="!loaded"></div>
 <table class="responsive-table highlight bordered">
   <tr>
     <th>Exchange</th>
-    <th>High</th> 
+    <th>High</th>
     <th>Low</th>
     <th>Vol</th>
     <th>Last</th>
     <th>Buy</th>
     <th>Sell</th>
   </tr>
-  <tr *ngFor="let brazil of BrazilData">
-    <td>{{ brazil.name }}</td>
-    <td>{{ brazil.high }}</td>
-    <td>{{ brazil.low }}</td>
-    <td>{{ brazil.vol }}</td>
-    <td>{{ brazil.last }}</td>
-    <td>{{ brazil.buy }}</td>
-    <td>{{ brazil.sell }}</td>
+  <tr *ngFor="let ticker of tickers">
+    <td>{{ ticker.name }}</td>
+    <td>{{ ticker.high }}</td>
+    <td>{{ ticker.low }}</td>
+    <td>{{ ticker.vol }}</td>
+    <td>{{ ticker.last }}</td>
+    <td>{{ ticker.buy }}</td>
+    <td>{{ ticker.sell }}</td>
   </tr>
 </table>
 
