@@ -24,3 +24,5 @@ NOTE: To run the application you need to install the Angular CLI, if you do not 
 
 ## Contributors
 [outlookcast ](https://github.com/outlookcast)- Vinicius Sampaio
+
+[gtkatakura](https://github.com/gtkatakura) - Gabriel Takashi Katakura

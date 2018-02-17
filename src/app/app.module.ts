@@ -11,6 +11,7 @@ import { routing } from 'app/app.routing';
 import { MaterializeModule } from 'angular2-materialize';
 import { ChartsModule } from 'ng2-charts';
 
+import { TraderRepository, TraderService } from './trader';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,10 @@ import { ChartsModule } from 'ng2-charts';
     MaterializeModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [
+    TraderRepository,
+    TraderService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
